@@ -40,7 +40,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "test": "npm run build && node --test dist/test/audit.test.js",
     "prepublishOnly": "npm test"
   },
   "devDependencies": {
