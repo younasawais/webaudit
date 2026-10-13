@@ -1,0 +1,50 @@
+{
+  "name": "webaudit",
+  "version": "0.1.0",
+  "description": "Quick, dependency-free website audit: HTTPS/HSTS, security headers, response time and SEO basics, streamed line by line. Library + CLI.",
+  "keywords": [
+    "audit",
+    "security-headers",
+    "seo",
+    "cli",
+    "csp",
+    "hsts",
+    "website",
+    "lighthouse-lite"
+  ],
+  "license": "MIT",
+  "author": "Studio Toronto (https://studiotoronto.ca)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/younasawais/webaudit.git"
+  },
+  "homepage": "https://github.com/younasawais/webaudit#readme",
+  "bugs": "https://github.com/younasawais/webaudit/issues",
+  "type": "module",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "bin": {
+    "webaudit": "dist/src/cli.js"
+  },
+  "files": [
+    "dist/src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^5.6.3"
+  }
+}
